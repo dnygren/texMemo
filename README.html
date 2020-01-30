@@ -1,0 +1,479 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<!-- Title -->
+<title>Rob Oakes – Oak-Tree Blog » texMemo: A Simple Memo Class for LaTeX and LyX</title>
+		
+		<!-- Standard page begins -->
+		<div class="page" id="vs_page">
+			<div class="page-body">
+	<!-- 
+This is the single post template.
+This shows only one post, with full details and its comments
+-->
+
+	<div id="content">
+		<div id="content-floater">
+			<div id="content-box">
+				
+								
+<!-- Top of the post block -->
+<!-- 
+This is the top of a post box
+-->
+<!-- Rounded top, if prerendering is enabled -->
+	<div class="post-rendered-top">
+		<div class="post-rendered-top-left"></div>
+		<div class="post-rendered-top-center"></div>
+		<div class="post-rendered-top-right"></div>
+	</div>
+		
+	
+<div class="post" id="post_1740">
+	<!-- IE Hack to force page redraw - hasLayout ugly bug -->
+	<!--[if lt IE 7]>
+	<script>
+			document.getElementById("post_1740").onresize = function() { 
+				this.style.height = '1%';
+				this.style.height = '100%';						
+			};
+	</script>
+	<![endif]-->	
+
+	<!-- Title bar content -->
+	<div class="cast-shadow" id="post_title_shadow_1740">
+	
+		<!-- Shadow block -->
+		<div class="vs-shadow">
+			<div class="vs-top"></div>
+			<div class="vs-topleft"></div>
+			<div class="vs-topright"></div>
+			<div class="vs-bottom"></div>
+			<div class="vs-bottomleft"></div>
+			<div class="vs-bottomright"></div>
+			<div class="vs-left"></div>
+			<div class="vs-lefttop"></div>
+			<div class="vs-leftbottom"></div>
+			<div class="vs-right"></div>
+			<div class="vs-righttop"></div>
+			<div class="vs-rightbottom"></div>
+		</div>
+		
+		<div class="post-title">
+			<div class="post-title-background" id="post_title_background_1740"></div>
+				
+			<div class="post-slider" vslider="true" slidebox="slide1740" id="post-slider-1740" callbacks="
+					var toggleShadow = {
+						'element' : document.getElementById('post_title_shadow_1740'),
+						'openCallbackFunction' : 'showShadow',
+						'closeCallbackFunction' : 'hideShadow'
+					}
+					
+					var callbacks = new Array();					
+					callbacks.push(toggleShadow);
+										
+					callbacks;" styleswitchcode="
+				
+					// Prepare all elements that need to change state on open/close
+					var postTitleBackground = {
+						'element' : document.getElementById('post_title_background_1740'),
+						'open' : 'post-title-background',
+						'closed' : 'post-title-background-closed'
+					}
+					var postBody = {
+						'element' : document.getElementById('post_body_1740'),
+						'open' : 'post-body',
+						'closed' : 'post-body-closed'
+					}
+					var postSlider = {
+						'element' : document.getElementById('post-slider-1740'),
+						'open' : 'post-slider',
+						'closed' : 'post-slider-closed'
+					}
+					
+					// Create one array with all associate arrays
+					var styles = new Array();					
+					styles.push(postTitleBackground);
+					styles.push(postBody);		
+					styles.push(postSlider);					
+										
+					styles;">
+	
+			</div>	
+			<div class="post-title-content">	
+			
+<!-- The title, whatever it is, should go here -->
+										
+			
+
+	<!-- Gravatar -->
+	
+	<!-- Title block --> 
+	<div id="titleblock"><h2 id="post-1740">
+		<a href="https://web.archive.org/web/20170414042416/http://blog.oak-tree.us/index.php/2010/08/02/texmemo" rel="bookmark" title="Permanent Link to texMemo: A Simple Memo Class for LaTeX and LyX">texMemo: A Simple Memo Class for LaTeX and LyX</a>
+	</h2></div>
+	<small>
+		<!-- Post Author -->
+		<a href="https://web.archive.org/web/20170414042416/http://blog.oak-tree.us/index.php/author/robertsoakes" title="Posts by Rob Oakes" rel="author">Rob Oakes</a>&nbsp;|		August 2, 2010 2:31 pm	</small>	
+	
+	<!-- Gravatar -->
+	
+
+<!-- Middle of the post block -->
+<!-- 
+This is the middle of a post box
+-->
+
+<!-- The title, whatever it was, should have finished here -->
+			</div>
+		</div>
+	</div>
+	
+	<!-- Post content, including the slide boxes -->
+	<div class="post-body" id="post_body_1740">
+		<div class="slideboxcontainer" id="slide1740">
+			<div class="slidebox" id="slide1740_box">
+
+<!-- The content, whatever it is, should go here -->
+																				
+	<!-- Content block -->										
+From
+ a structural standpoint, memos are interesting documents.&nbsp; They 
+share some attributes in common with a letter, and others in common with
+ a structured report.&nbsp; Because of this, LaTeX uses have 
+historically used a document class meant for one of those documents when
+ composing memos.&nbsp; There isn’t anything wrong with that.&nbsp; It’s
+ very easy to begin a new “article” and then add the needed “To”, 
+“From”, “Subject” and “Date” lines manually.</p>
+<p><!--noadsense--></p>
+<p>However, while this is easy, it still requires that you do a bit of 
+“finger painting”.&nbsp; As a (more or less) dedicated user of LaTeX, I 
+dislike finger painting.&nbsp; Quite a bit, actually.&nbsp; It might 
+even be accurate to say that I am philosophically opposed to finger 
+painting.</p>
+<p>The major advantage of using LaTeX is that, like XHTML and CSS, it 
+can separate your content from the markup and formatting that determines
+ its appearance.&nbsp; When you fingerpaint, however, you mix them all 
+together.&nbsp; Your appearance syntax and the content of your document 
+get inseparably intertwined.&nbsp; In some cases, you couldn’t separate 
+them even if you wanted to.&nbsp; For that reason, finger painting is 
+just wrong.&nbsp; But even though finger paining in LaTeX may feel 
+wrong, I’ve never had a reason to create a better solution.</p>
+<p>That is, until a few a weeks ago.</p>
+<p>Quite recently, I’ve become involved in a new project and because of 
+what the project is and the need to official keep records of 
+communication, I’ve found myself writing memos.&nbsp; Lot’s of 
+memos.&nbsp; More memos than I’ve ever written at any other point in my 
+life.&nbsp; Moreover, I’m going to be writing (many) memos for the 
+foreseeable future.&nbsp; On Friday, after finishing (yet another) memo,
+ I decided that it was time to create a more formal memo 
+template/document class for LaTeX.</p>
+<p>I’m calling it texMemo.</p>
+<p><span id="more-1740"></span></p>
+<h2>texMemo – A Simple Document Class for LaTeX</h2>
+<p>texMemo is a very simple memo class.&nbsp; Though I may be writing lots of memos, my needs are basic.</p>
+<p>Based on the standard “article” class, texMemo supports all of 
+article’s features in addition to a few others.&nbsp; These include 
+commands for type-setting the memo recipient (\memoto), sender 
+(\memofrom), Subject (\memosubject), and Date (\memodate).</p>
+<p>If you choose, you can also add a logo to your document using the 
+\logo command.&nbsp; The document logo can be an image, text, or any 
+combination of the two.&nbsp; It is typeset in the upper right hand 
+corner of the page.</p>
+<p style="text-align: center;"><img class="wlDisabledImage" style="margin: 15px 0px 20px; display: inline; border-width: 0px;" title="image" src="Rob%20Oakes%20%E2%80%93%20Oak-Tree%20Blog%20%C2%BB%20texMemo:%20A%20Simple%20Memo%20Class%20for%20LaTeX%20and%20LyX_files/image.png" alt="image" width="586" height="356" border="0"></p>
+<p>In addition to the LaTeX document class, I have created a layout file so that you can use texMemo from LyX.</p>
+<h3>Downloads and Installation</h3>
+<ul>
+<li><a href="https://web.archive.org/web/20170414042416/http://oak-tree.us/stuff/LyX/texMemo.zip">texMemo LaTeX Files</a>.&nbsp;
+ All of the files needed to use the class (including texMemo.cls and 
+examples).&nbsp; To install, copy to an appropriate folder in your tex 
+path (such as the local texmf folder) and refresh the tex 
+database.&nbsp; (Information about installing LaTeX document classes can
+ be found <a href="https://web.archive.org/web/20170414042416/http://blog.oak-tree.us/index.php/2009/11/02/custom-lyx-nih">here</a>, while instructions for customizing your LaTeX installation are available <a href="https://web.archive.org/web/20170414042416/http://blog.oak-tree.us/index.php/2010/07/15/latex-custom">in this article</a>.)</li>
+<li><a href="https://web.archive.org/web/20170414042416/http://oak-tree.us/stuff/LyX/texMemo-LyX.zip">texMemo LyX Files</a>.&nbsp; Contains the texMemo layout and examples.</li>
+</ul>
+<h4>Package Requirements</h4>
+<p>texMemo is based on the article class and uses Palatino as its 
+default font.&nbsp; As a result, the “palatino” package must be 
+installed in order for it to work.&nbsp; Most LaTeX distributions, 
+however, include Palatino in their default installation.</p>
+<h4>Memo Examples</h4>
+<ul>
+<li>Example 1 (LyX).&nbsp; Memo from John F. Kennedy to Lyndon B. 
+Johnson inquiring about the formation of a space program.&nbsp; It was 
+written shortly after Yrui Gagarin became the first person to fly in 
+space, reinforcing American fears about being left behind in a 
+technological competition with the Soviet Union.&nbsp; <a href="https://web.archive.org/web/20170414042416/http://oak-tree.us/stuff/LyX/texMemo/texMemo-example3.lyx">LyX Source</a>, <a href="https://web.archive.org/web/20170414042416/http://oak-tree.us/stuff/LyX/texMemo/texMemo-example3.pdf">PDF Output</a>.</li>
+<li>Example 2 (LaTeX).&nbsp; Johnson’s response, describing America’s 
+current capabilities in space and the efforts required to establish 
+American leadership in space exploration.&nbsp; <a href="https://web.archive.org/web/20170414042416/http://oak-tree.us/stuff/LyX/texMemo/texMemo-example2.tex">LaTeX Source</a>, <a href="https://web.archive.org/web/20170414042416/http://oak-tree.us/stuff/LyX/texMemo/texMemo-example2.pdf">PDF Output</a>.</li>
+</ul>
+<h3>Class Usage</h3>
+<p>To use the texmemo class, there are a few important macros.&nbsp; These are:</p>
+<ul>
+<li>\memoto{ … }.&nbsp; The name of the memo recipient or group.</li>
+<li>\memofrom{ … }.&nbsp; The sender of the memo.</li>
+<li>\memosubject{ … }.&nbsp; The subject of the memo.</li>
+<li>\memodate{ … }.&nbsp; Date/time of the memo.</li>
+<li>\memologo{ … }.&nbsp; Optional argument that allows you to add a 
+logo to the upper right hand corner of the document.&nbsp; It may 
+include either an image, text, or a combination of the two.</li>
+</ul>
+<p>All sectioning commands are identical to those available in the 
+standard “article” class.&nbsp; By default, texMemo uses the Palatino 
+font, though any other LaTeX font can also be used.&nbsp; texMemo is 
+compatible with XeTeX.</p>
+<div id="crp_related"> </div>
+	<!-- Metadata - tags, categories, comments and so on... -->
+	<p class="postmetadata"> 
+									
+		Tags: <a href="https://web.archive.org/web/20170414042416/http://blog.oak-tree.us/index.php/tag/latex" rel="tag">LaTeX</a>,<a href="https://web.archive.org/web/20170414042416/http://blog.oak-tree.us/index.php/tag/lyx" rel="tag">LyX</a>,<a href="https://web.archive.org/web/20170414042416/http://blog.oak-tree.us/index.php/tag/texmemo" rel="tag">texMemo</a><br> 
+		Categories:&nbsp;<a href="https://web.archive.org/web/20170414042416/http://blog.oak-tree.us/index.php/category/computerprog" rel="category tag">Computer</a>, <a href="https://web.archive.org/web/20170414042416/http://blog.oak-tree.us/index.php/category/computerprog/computer_programming" rel="category tag">Programming</a>, <a href="https://web.archive.org/web/20170414042416/http://blog.oak-tree.us/index.php/category/literature" rel="category tag">Writing/Literature</a> <br> 					
+		<a href="https://web.archive.org/web/20170414042416/http://blog.oak-tree.us/index.php/2010/08/02/texmemo#comments">4 Comments »</a>	</p> 
+
+
+<!-- Bottom of the post block -->
+<!-- 
+This is the bottom of a post box
+-->
+
+<!-- The content, whatever it is, should have finish here -->				
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- Rounded bottom, if prerendering is enabled -->
+	<div class="post-rendered-bottom">
+		<div class="post-rendered-bottom-left"></div>
+		<div class="post-rendered-bottom-center"></div>
+		<div class="post-rendered-bottom-right"></div>
+	</div>
+												
+					
+<!-- 
+This is the comments block
+It should be included when comments should be displayed
+-->
+
+<div id="comments">
+
+<!-- Comment count -->
+<h2 class="respond">
+Comments
+</h2>
+<p>4 Responses to “texMemo: A Simple Memo Class for LaTeX and LyX”</p>
+	 
+
+<!-- Comment title -->
+<small>						
+<p>
+<strong><a href="https://web.archive.org/web/20170414042416/http://www.troubleshooters.com/" rel="external nofollow" class="url">Steve Litt</a></strong>
+wrote a <strong>comment</strong> on August 2, 2010				
+</p>													</small>
+					</div>
+				</div>
+				
+				<div class="comment-bottom">
+						
+					<!-- Comment contents -->
+					<div class="comment-contents">	
+						
+												
+<p>Hi Rob,</p>
+<p>Next step — incorporate it as a LyX template so you can create a brand new new one via File-&gt;New_from_template.</p>
+<p>SteveT</p>
+						
+						
+						<!-- Gravatar -->
+												
+						<p class="comment-metadata"> 
+													</p> 			
+					</div>				
+				</div>
+				
+				<!-- Rounded bottom, if prerendering is enabled -->
+								<div class="comment-rendered-bottom">
+					<div class="comment-rendered-bottom-left"></div>
+					<div class="comment-rendered-bottom-center"></div>
+					<div class="comment-rendered-bottom-right"></div>
+				</div>
+						
+			</div>
+
+						
+			<!-- Determine if the author of the comment is the blog author -->
+					
+
+			<div class="comment">
+			
+				<!-- Rounded top, if prerendering is enabled -->
+								<div class="comment-rendered-top">
+					<div class="comment-rendered-top-left"></div>
+					<div class="comment-rendered-top-center"></div>
+					<div class="comment-rendered-top-right"></div>
+				</div>
+						
+			
+				<div class="comment-top">		
+					
+					<!-- Comment title -->
+					<div class="comment-title">
+						<small>						
+							<strong>Liviu</strong>
+							wrote a <strong>comment</strong> on August 2, 2010				
+											
+													</small>
+					</div>
+				</div>
+				
+				<div class="comment-bottom">
+						
+					<!-- Comment contents -->
+					<div class="comment-contents">	
+						
+						<!-- Gravatar -->
+												
+						<p>Nice one.<br>
+A small issue: the “texMemo LyX Files” link points to xetexCV-LyX.zip</p>
+						
+						
+						<!-- Gravatar -->
+												
+						<p class="comment-metadata"> 
+													</p> 			
+					</div>				
+				</div>
+				
+				<!-- Rounded bottom, if prerendering is enabled -->
+								<div class="comment-rendered-bottom">
+					<div class="comment-rendered-bottom-left"></div>
+					<div class="comment-rendered-bottom-center"></div>
+					<div class="comment-rendered-bottom-right"></div>
+				</div>
+						
+			</div>
+
+						
+			<!-- Determine if the author of the comment is the blog author -->
+					
+
+			<div class="comment">
+			
+				<!-- Rounded top, if prerendering is enabled -->
+								<div class="comment-admin-rendered-top">
+					<div class="comment-admin-rendered-top-left"></div>
+					<div class="comment-admin-rendered-top-center"></div>
+					<div class="comment-admin-rendered-top-right"></div>
+				</div>
+						
+			
+				<div class="comment-top-admin">		
+					
+					<!-- Comment title -->
+					<div class="comment-title">
+						<small>						
+							<strong><a href="https://web.archive.org/web/20170414042416/http://blog.oak-tree.us/" rel="external nofollow" class="url">Rob Oakes</a></strong>
+							wrote a <strong>comment</strong> on August 2, 2010				
+											
+													</small>
+					</div>
+				</div>
+				
+				<div class="comment-bottom">
+						
+					<!-- Comment contents -->
+					<div class="comment-contents">	
+						
+						<!-- Gravatar -->
+												
+						<p>@Liviu.  Thanks for the heads up (and for the words of 
+encouragement).  I’ve updated the “texMemo LyX Files” link to point at 
+the correct location.  Sorry for the mess-up.</p>
+<p>@Steve, that’s a good idea.  I’ve got a simple template that I use 
+with it.  When I have a minute, I’ll upload it and update the post.</p>
+						
+						
+						<!-- Gravatar -->
+												
+						<p class="comment-metadata"> 
+													</p> 			
+					</div>				
+				</div>
+				
+				<!-- Rounded bottom, if prerendering is enabled -->
+								<div class="comment-rendered-bottom">
+					<div class="comment-rendered-bottom-left"></div>
+					<div class="comment-rendered-bottom-center"></div>
+					<div class="comment-rendered-bottom-right"></div>
+				</div>
+						
+			</div>
+
+						
+			<!-- Determine if the author of the comment is the blog author -->
+					
+
+			<div class="comment">
+			
+				<!-- Rounded top, if prerendering is enabled -->
+								<div class="comment-rendered-top">
+					<div class="comment-rendered-top-left"></div>
+					<div class="comment-rendered-top-center"></div>
+					<div class="comment-rendered-top-right"></div>
+				</div>
+						
+			
+				<div class="comment-top">		
+					
+					<!-- Comment title -->
+					<div class="comment-title">
+						<small>						
+							<strong><a href="https://web.archive.org/web/20170414042416/http://www.msu.edu/~rubin/" rel="external nofollow" class="url">Paul A. Rubin</a></strong>
+							wrote a <strong>comment</strong> on August 25, 2010				
+											
+													</small>
+					</div>
+				</div>
+				
+				<div class="comment-bottom">
+						
+					<!-- Comment contents -->
+					<div class="comment-contents">	
+						
+						<!-- Gravatar -->
+												
+						<p>First, thanks for putting this together.  Second, in case 
+anybody else trips over this, creating a new document and then switching
+ it to the memo class may cause an options clash with the geometry 
+package if your default document class specifies non-default margins.  
+(My default class is article with US letter paper and 1″ margins all 
+around.)  Third, when I installed here (LyX 1.6.7), LyX refused to load 
+the layout file (after reconfiguring).  Turns out the problem was the 
+Format value in the layout file, which as 19.  I changed it to 11 (the 
+highest of any of the layouts that ship with 1.6.7) and it loaded fine, 
+and seems to work correctly.</p>
+						
+						
+		<!-- Creative Commons License -->
+		<div class="cc">	
+                    <p><style type="text/css">#a84f0c8c3, #a84f0c8c3 *,#a84f0c8c3 A {text-decoration:none; font-size:0.9em; color: #ddd;}</style><span id="a84f0c8c3"><!--2031697567944--></span></p><br>
+			Copyright 2008-2010, Rob Oakes.  Apolitically Incorrect.		</div>
+		
+		
+	</div>
+</div>
+
+
+		<!-- End of page -->
+
+<!-- Performance optimized by W3 Total Cache. Learn more: https://www.w3-edge.com/products/
+
+ Served from: blog.oak-tree.us @ 2017-04-13 22:24:16 by W3 Total Cache -->
+<!--
+     FILE ARCHIVED ON 04:24:16 Apr 14, 2017 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 16:06:40 Jan 30, 2020.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->
